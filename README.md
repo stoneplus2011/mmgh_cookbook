@@ -1,97 +1,66 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🍳 Cookbook_V1
+**Your Intelligent Kitchen Companion**
 
-# Getting Started
+Cookbook_V1 is a modern React Native application designed for food enthusiasts who want to bridge the gap between their physical fridge and digital recipe library. Powered by **Gemini 2.5 Flash AI** and **Supabase**, this app transforms how you manage ingredients and discover dishes.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 📱 User Flow Experience
 
-## Step 1: Start Metro
+### 1. Authentication & Cloud Storage
+Upon opening the app, you are greeted by a clean, card-based dashboard. Signing in with Google ensures your personal cookbook and inventory are synced to the cloud and available on any device, so You **NEVER** lose your frige ingredients list and recipes!
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+<img width="292.5" height="633" alt="Simulator Screenshot - iPhone 16e - 2026-03-18 at 13 58 26" src="https://github.com/user-attachments/assets/f386c1bb-efbf-4d77-b309-eddf41f03d5d" />
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
 
-```sh
-# Using npm
-npm start
+### 2. Scanning the Fridge
+Stop manual typing. Navigate to **Inventory** and select **Scan Album**. Simply take a photo of your fridge, and the AI begins processing to identify your stock immediately. The AI identifies ingredients and presents them for review. You can tap any item to edit the name, translation (EN/ZH), or category, ensuring your inventory is 100% accurate before saving.
 
-# OR using Yarn
-yarn start
-```
+<img width="292.5" height="633" alt="Simulator Screenshot - iPhone 16e - 2026-03-18 at 13 58 44" src="https://github.com/user-attachments/assets/26124b92-7112-44aa-9713-aaf608874e6b" />
+<img width="292.5" height="633" alt="Simulator Screenshot - iPhone 16e - 2026-03-18 at 13 59 04" src="https://github.com/user-attachments/assets/28aea05b-b00f-4707-816e-abe754bd1f1d" />
+<img width="292.5" height="633" alt="Simulator Screenshot - iPhone 16e - 2026-03-18 at 13 59 10" src="https://github.com/user-attachments/assets/8fe0de36-73ca-4dcb-91c3-b3639ccd445c" />
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### 3. Managed Inventory
+Once saved, your ingredients are beautifully categorized. The app automatically compares these against recipe requirements to show you what is **"In Stock"** versus what is **"Missing"**.
 
-### Android
+<img width="292.5" height="633" alt="Simulator Screenshot - iPhone 16e - 2026-03-18 at 14 04 12" src="https://github.com/user-attachments/assets/08064bbf-26f9-4d55-ba3d-d1fbd0f54b40" />
 
-```sh
-# Using npm
-npm run android
+---
 
-# OR using Yarn
-yarn android
-```
+### 5. Creating AI Recipes
+When adding a new dish, use the **AI Extract** tool. Upload a photo of a recipe card or a screenshot from a website, and the AI parses the ingredients and steps into a structured format.
 
-### iOS
+<img width="292.5" height="633" alt="Simulator Screenshot - iPhone 16e - 2026-03-18 at 14 00 13" src="https://github.com/user-attachments/assets/d9233db3-fff1-49b9-9459-86206b911aca" />
+<img width="292.5" height="633" alt="Simulator Screenshot - iPhone 16e - 2026-03-18 at 14 00 18" src="https://github.com/user-attachments/assets/c0dd19a3-54fe-4652-bb13-9863e511862a" />
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+---
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+### 6. Starter Library
+Access the **Starter Recipes** to browse over preset recipes. Each preset can be viewed in detail and "Imported" into your personal collection using a lightweight pointer system.
 
-```sh
-bundle install
-```
+<img width="292.5" height="633" alt="Simulator Screenshot - iPhone 16e - 2026-03-18 at 14 00 43" src="https://github.com/user-attachments/assets/fc033ca4-0a8e-469a-86ee-d87b5a7263d0" />
+<img width="292.5" height="633" alt="Simulator Screenshot - iPhone 16e - 2026-03-18 at 14 00 56" src="https://github.com/user-attachments/assets/39814cd3-4051-43f9-95eb-19dca770da8b" />
+<img width="292.5" height="633" alt="Simulator Screenshot - iPhone 16e - 2026-03-18 at 14 01 00" src="https://github.com/user-attachments/assets/03fab2c6-3a94-47d1-95cc-c88da47ca64f" />
 
-Then, and every time you update your native dependencies, run:
 
-```sh
-bundle exec pod install
-```
+---
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## 🛠 Installation & Setup
 
-```sh
-# Using npm
-npm run ios
+To run this project locally, you must provide your own API keys. 
 
-# OR using Yarn
-yarn ios
-```
+1. **Clone the repo**: `git clone https://github.com/stoneplus2011/mmgh_cookbook.git`
+2. **Install dependencies**: `npm install`
+3. **Configure Environment**: Create a `.env` file in the root directory and add the following:
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+```text
+# Supabase Configuration
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_ANON_KEY=your_supabase_anon_key
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+# Google AI (Gemini)
+GEMINI_API_KEY=your_gemini_api_key
 
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+# Google Auth
+GOOGLE_CLIENT_ID=your_google_oauth_client_id
